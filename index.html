@@ -7,6 +7,69 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="clothes"></div>
+    <div id="add">
+      <form onSubmit="event.preventDefault(); addItems()">
+        <h3>Insert Your Product</h3>
+        <input
+          type="text"
+          name="category"
+          id="category"
+          placeholder="Enter Product Name"
+          class="form-control"
+          required
+        />
+        <input
+          type="text"
+          name="description"
+          id="description"
+          placeholder="Enter Product Description"
+          class="form-control"
+          required
+        />
+        <input
+          type="number"
+          name="id"
+          id="productId"
+          placeholder="Enter Product ID"
+          class="form-control"
+          required
+        />
+        <input
+          type="text"
+          name="image"
+          id="image"
+          placeholder="Enter Image url"
+          class="form-control"
+          required
+        />
+        <input
+          type="text"
+          name="price"
+          id="price"
+          placeholder="Enter Product Price"
+          class="form-control"
+          required
+        />
+        <input
+          type="number"
+          name="rating"
+          id="rating"
+          placeholder="Enter Product rating"
+          class="form-control"
+          required
+        />
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Enter Product title"
+          class="form-control"
+          required
+        />
+        <button class="submit">ADD PRODUCT</button>
+      </form>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

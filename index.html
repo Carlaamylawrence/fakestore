@@ -19,113 +19,103 @@
       <h1 class="text-align m-5">THIS IS A FAKE STORE</h1>
     </div>
     <div id="clothes"></div>
-    <button
-      type="button"
-      class="btn btn-dark text-align"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      ADD ITEMS HERE
-    </button>
+    <div id="add" class="m-5">
+      <button
+        type="button"
+        class="btn btn-dark text-align"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        ADD ITEMS HERE
+      </button>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Insert Your Product
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form onsubmit="event.preventDefault(); addItems()">
-              <input
-                type="text"
-                name="category"
-                id="category"
-                placeholder="Enter Product category"
-                class="form-control p-2"
-                required
-              />
-              <input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="Enter Product Description"
-                class="form-control"
-                required
-              />
-              <input
-                type="number"
-                name="id"
-                id="productId"
-                placeholder="Enter Product ID"
-                class="form-control"
-                required
-              />
-              <input
-                type="text"
-                name="image"
-                id="image"
-                placeholder="Enter Image url"
-                class="form-control"
-                required
-              />
-              <input
-                type="text"
-                name="price"
-                id="price"
-                placeholder="Enter Product Price"
-                class="form-control"
-                required
-              />
-              <input
-                type="number"
-                name="rating"
-                id="rating"
-                placeholder="Enter Product rating"
-                class="form-control"
-                required
-              />
-              <input
-                type="text"
-                name="title"
-                id="title"
-                placeholder="Enter Product title"
-                class="form-control"
-                required
-              />
-              <button type="submit" class="submit btn btn-dark">
-                ADD PRODUCT
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Insert Your Product
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="event.preventDefault(); addItems()">
+                <select name="category" id="category">
+                  <option value="men's clothing">Men's Clothing</option>
+                  <option value="women's clothing">Women's Clothing</option>
+                  <option value="jewelery">Jewelery</option>
+                  <option value="Electronics">Electronics</option>
+                </select>
+                <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Enter Product Description"
+                  class="form-control"
+                  required
+                />
+                <input
+                  type="text"
+                  name="image"
+                  id="image"
+                  placeholder="Enter Image url"
+                  class="form-control"
+                  required
+                />
+                <input
+                  type="text"
+                  name="price"
+                  id="price"
+                  placeholder="Enter Product Price"
+                  class="form-control"
+                  required
+                />
+                <input
+                  type="number"
+                  name="rating"
+                  id="rating"
+                  placeholder="Enter Product rating"
+                  class="form-control"
+                  required
+                />
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Enter Product title"
+                  class="form-control"
+                  required
+                />
+                <button type="submit" class="submit btn btn-dark">
+                  ADD PRODUCT
+                </button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
               </button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="add" class="m-5"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

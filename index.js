@@ -7,12 +7,6 @@ fetch(url)
     items = data;
     console.log(data);
     showItems(data);
-    // for (let i = 0; i < items.length; i++) {
-    //   document.querySelector("#clothes").innerHTML += `
-    //   <img onClick="toggleActive('#item${i}')" src=${items[i].image} style="width:200px; height:200px; padding:20px; ">
-
-    //   `;
-    // }
   });
 
 function showItems(items) {
@@ -28,7 +22,7 @@ function addItems() {
   let item = {
     category: document.querySelector("#category").value,
     description: document.querySelector("#description").value,
-    productId: document.querySelector("#productId").value,
+    id: items.length + 1,
     image: document.querySelector("#image").value,
     price: document.querySelector("#price").value,
     rating: document.querySelector("#rating").value,

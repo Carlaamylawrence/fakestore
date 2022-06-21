@@ -14,7 +14,7 @@ function showItems(items) {
   items.forEach((item, i) => {
     document.querySelector(
       "#clothes"
-    ).innerHTML += ` <img onClick="toggleActive('#item${i}')" src=${item.image} style="width:200px; height:200px; padding:20px; ">`;
+    ).innerHTML += ` <img src=${item.image} style="width:200px; height:200px; padding:20px; "><div>${item.title}</div>`;
   });
 }
 
@@ -32,3 +32,23 @@ function addItems() {
   showItems(items);
   console.log(items);
 }
+
+function getSelectedValue(e) {
+  const category = e.target.value;
+  if (category === "all") {
+    return showItems(items);
+  }
+  const filtered = items.filter((item) => item.category === category);
+
+  return showItems(filtered);
+}
+
+const sortedPrice = (e) => {
+  const direction = e.target.value;
+  const sorted = items.sort((a, b) => a.price - b.price);
+  if (direction === "ascending") {
+    showItems(sorted);
+  } else {
+    showItems(sorted.reverse());
+  }
+};

@@ -18,6 +18,19 @@
     <div id="heading" class="d-flex justify-content-center">
       <h1 class="text-align m-5">THIS IS A FAKE STORE</h1>
     </div>
+    <div class="searchFeature">
+      <select name="category" id="category" onchange="getSelectedValue(event);">
+        <option value="all">All</option>
+        <option value="men's clothing">Men's Clothing</option>
+        <option value="women's clothing">Women's Clothing</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="electronics">Electronics</option>
+      </select>
+      <select onchange="sortedPrice(event)">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+    </div>
     <div id="clothes"></div>
     <div id="add" class="m-5">
       <button
@@ -56,7 +69,7 @@
                   <option value="men's clothing">Men's Clothing</option>
                   <option value="women's clothing">Women's Clothing</option>
                   <option value="jewelery">Jewelery</option>
-                  <option value="Electronics">Electronics</option>
+                  <option value="electronics">Electronics</option>
                 </select>
                 <input
                   type="text"

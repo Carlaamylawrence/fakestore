@@ -1,15 +1,6 @@
 const url = "https://fakestoreapi.com/products";
 let items = [];
 
-// fetch(url)
-//   .then((res) => res.json())
-//   .then((data) => {
-//     console.log(data);
-//     items = data;
-//     document.querySelector("#clothes").innerHTML = `${items}`;
-//     showItems(items);
-//   });
-
 fetch(url)
   .then((res) => res.json())
   .then((data) => {

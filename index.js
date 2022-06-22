@@ -64,4 +64,19 @@ const sortedName = (e) => {
     }
     return 0;
   });
+  if (direction === "ascending") {
+    showItems(sorted);
+  } else {
+    showItems(sorted.reverse());
+  }
 };
+
+const textSearch = (e) => {
+  const text = e.target.value;
+  const filteredItems = items.filter((item) =>
+    item.title.toLowerCase().includes(text.toLowerCase())
+  );
+  showItems(filteredItems);
+};
+
+// delete use indexof to find item you delete and splice

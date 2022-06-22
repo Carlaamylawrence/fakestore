@@ -19,12 +19,10 @@
       <h1 class="text-align m-5">THIS IS A FAKE STORE</h1>
     </div>
     <div class="searchFeature">
-      <select
-        name="category"
-        id="category"
-        onchange="getSelectedValue(event);"
-        placeholder="Categories"
-      >
+      <select name="category" id="category" onchange="getSelectedValue(event);">
+        <option value="undefined" selected disabled hidden>
+          Select a Category
+        </option>
         <option value="all">All</option>
         <option value="men's clothing">Men's Clothing</option>
         <option value="women's clothing">Women's Clothing</option>
@@ -32,13 +30,20 @@
         <option value="electronics">Electronics</option>
       </select>
       <select onchange="sortedPrice(event)">
+        <option value="undefined" selected disabled hidden>
+          Order by Price
+        </option>
         <option value="ascending">Ascending</option>
         <option value="descending">Descending</option>
       </select>
       <select onchange="sortedName(event)">
+        <option value="undefined" selected disabled hidden>
+          Order by Name
+        </option>
         <option value="ascending">Ascending</option>
         <option value="descending">Descending</option>
       </select>
+      <input type="text" oninput="textSearch(event)" placeholder="Title" />
     </div>
     <div id="clothes"></div>
     <div id="add" class="m-5">

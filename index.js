@@ -14,7 +14,13 @@ function showItems(items) {
   items.forEach((item, i) => {
     document.querySelector(
       "#clothes"
-    ).innerHTML += ` <img src=${item.image} style="width:200px; height:200px; padding:20px; "><div>${item.title}</div>`;
+    ).innerHTML += ` 
+    <div class="card col-md-4 m-4 d-flex justify-content-center align-content-center p-3">
+    <img src=${item.image} style="width:200px; height:200px; padding:20px; " >
+    <div class="item-details">${item.description}</div>
+    <div class="d-flex justify-content-center align-conter-center"><h3>${item.title}</h3></div>
+    <div class="d-flex justify-content-center align-conter-center"><h4>${item.price}</h4></div>
+    </div>`;
   });
 }
 

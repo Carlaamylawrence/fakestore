@@ -18,7 +18,8 @@
     <div id="heading" class="d-flex justify-content-center">
       <h1 class="text-align m-5">THIS IS A FAKE STORE</h1>
     </div>
-    <div class="searchFeature">
+    <!-- FILTERS -->
+    <div class="searchFeature d-flex justify-content-center align-content-center">
       <select name="category" id="category" onchange="getSelectedValue(event);">
         <option value="undefined" selected disabled hidden>
           Select a Category
@@ -45,8 +46,16 @@
       </select>
       <input type="text" oninput="textSearch(event)" placeholder="Title" />
     </div>
-    <div id="clothes"></div>
+
+    <!-- DISPLAY CLOTHES -->
+    <div class="container-fluid ">
+    <div id="clothes" class=" row p-5 g-3 d-flex justify-content-center align-content-center"></div>
+  </div>
+    <!-- ADD ITEMS HERE -->
     <div id="add" class="m-5">
+     
+    
+      
       <button
         type="button"
         class="btn btn-dark text-align"
